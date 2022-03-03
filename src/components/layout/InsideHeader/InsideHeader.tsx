@@ -1,8 +1,16 @@
-import React from "react";
-import "./InsideHeader.scss";
+import "./style.scss";
 
 export const InsideHeader = () => {
-  return <div >
-
-  </div>;
+  return (
+    <div className="header-first-block">
+      <h2>
+        Институт математики им.А.Джураева Национальной Академии наук
+        Таджикистана
+      </h2>
+      <h3>
+        АЛГЕБРА, ТЕОРИЯ ЧИСЕЛ, ДИСКРЕТНАЯ ГЕОМЕТРИЯ И МНОГОМАСШТАБНОЕ
+        МОДЕЛИРОВАНИЕ СОВРЕМЕННЫЕ ПРОБЛЕМЫ, ПРИЛОЖЕНИЯ И ПРОБЛЕМЫ ИСТОРИИ
+      </h3>
+    </div>
+  );
 };

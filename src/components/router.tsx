@@ -3,7 +3,8 @@ import { Redirect, Route, Switch } from "react-router";
 import { LayoutDefault } from "./layout/LayoutDefault";
 
 enum urls {
-  main = "/",
+  main = "/main",
+  regUsers = "/regiserUser",
   booklet = "/booklet",
   loginAdmin = "",
 }
@@ -14,16 +15,30 @@ const TruAouth: FC = ({ children }) => {
 
 const routesConfig = [
   {
-    path: urls.main,
+    path: "/",
     layout: LayoutDefault,
-    guard: <>{TruAouth}</>,
+    guard: TruAouth,
     routes: [
+      {
+        path: "/",
+        exact: true,
+        component: () => <Redirect to={urls.main} />,
+      },
       {
         exact: true,
         path: urls.main,
         component: lazy(() =>
-          import("./feature/AboutUnior/AboutUnior").then((module) => ({
+          import("./feature/Main/AboutUnior/AboutUnior").then((module) => ({
             default: module.default,
+          }))
+        ),
+      },
+      {
+        path: urls.regUsers,
+        exact: true,
+        component: lazy(() =>
+          import("./feature/Main/RegisterUser/RegisterUser").then((module) => ({
+            default: module.AboutUnior,
           }))
         ),
       },

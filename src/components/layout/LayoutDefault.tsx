@@ -1,14 +1,21 @@
 import React, { FC } from "react";
+import { InsideFooter } from "./InsideFooter/InsideFooter";
+import { InsideHeader } from "./InsideHeader/InsideHeader";
+import { NavButton } from "../shared/NavButton/NavButton";
 
 export const LayoutDefault: FC = ({ children }) => {
   return (
     <>
-      <header>
-        <h1>test</h1>
+      <div className="opacity-img"></div>
+      <header className="container">
+        <InsideHeader />
       </header>
-      <main>{children}</main>
-      <footer>
-        <h1>Footer</h1>
+      <nav className="container">
+        <NavButton />
+      </nav>
+      <main className="container">{children}</main>
+      <footer className="container">
+        <InsideFooter />
       </footer>
     </>
   );

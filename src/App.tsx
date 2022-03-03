@@ -1,8 +1,9 @@
-import React from "react";
 import "./App.scss";
 import { Routes } from "./components/router";
 
 function App() {
+  // console.log(<Routes />);
+
   return (
     <>
       <Routes />

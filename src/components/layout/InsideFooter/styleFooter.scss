@@ -1,0 +1,17 @@
+footer {
+  .footer-contain {
+    background-color: #f3f3f3;
+    color: #898989;
+    padding: 30px 80px;
+    display: flex;
+  }
+
+  .footer-contain * {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+}
