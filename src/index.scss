@@ -1,8 +1,11 @@
 @import "./assets/css/bootstrap.min.css";
 @import "./assets/css/bootstrap.rtl.min.css";
 
-body {
+html {
   font-size: 16px;
+}
+
+body {
   background: #1a98c7 left top no-repeat
     url("./assets/images/body-background/bg-1.jpg") fixed;
   position: relative;

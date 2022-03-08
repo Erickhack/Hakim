@@ -1,26 +1,15 @@
-import { FC, Fragment, lazy, Suspense } from "react";
-import { Redirect, Route, Switch } from "react-router";
+import { Fragment, lazy, Suspense } from "react";
+import { Redirect, Route, Switch } from "react-router-dom";
 import { LayoutDefault } from "./layout/LayoutDefault";
-
-enum urls {
-  main = "/main",
-  regUsers = "/regiserUser",
-  booklet = "/booklet",
-  loginAdmin = "",
-}
-
-const TruAouth: FC = ({ children }) => {
-  return <>{children}</>;
-};
+import { urls } from "./interfaces";
 
 const routesConfig = [
   {
     path: "/",
     layout: LayoutDefault,
-    guard: TruAouth,
     routes: [
       {
-        path: "/",
+        path: "/admin",
         exact: true,
         component: () => <Redirect to={urls.main} />,
       },
@@ -38,44 +27,17 @@ const routesConfig = [
         exact: true,
         component: lazy(() =>
           import("./feature/Main/RegisterUser/RegisterUser").then((module) => ({
-            default: module.AboutUnior,
+            default: module.default,
           }))
         ),
       },
     ],
   },
-  // {
-  //   path: urls.login,
-  //   layout: Login,
-  //   routes: [
-  //     {
-  //       exact: true,
-  //       path: urls.login,
-  //       component: lazy(() =>
-  //         import("../components/Authorized/Authorized").then((module) => ({
-  //           default: module.Authorized,
-  //         }))
-  //       ),
-  //     },
-  //   ],
-  // },
-  // {
-  //   path: "/",
-  //   layout: MainView,
-  //   guard: AuthGuard,
-  //   routes: [
-  //     {
-  //       exact: true,
-  //       path: "/",
-  //       component: () => <Redirect to={urls.categories} />,
-  //     },
-  //   ],
-  // },
 ];
 
 const renderRoutes = (routes: any) =>
   routes ? (
-    <Suspense fallback={<>test</>}>
+    <Suspense fallback={<>Loading...</>}>
       <Switch>
         {routes.map((route: any, i: number) => {
           const Layout = route.layout || Fragment;

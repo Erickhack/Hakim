@@ -1,0 +1,15 @@
+.navigation-list {
+  display: flex;
+  color: white;
+  text-transform: uppercase;
+  list-style: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0;
+  width: 100%;
+  li {
+    margin: 0 auto;
+    padding: 5px 0;
+    position: relative;
+  }
+}

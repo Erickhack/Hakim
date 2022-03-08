@@ -1,3 +1,3 @@
 export default function AboutUnior() {
-  return <>AboutUnior</>;
+  return <section className="about-unior"></section>;
 }

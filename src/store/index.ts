@@ -3,9 +3,9 @@ import { createStore, applyMiddleware, compose } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { rootReducer } from "./reducers";
 import thunk from "redux-thunk";
-import { createHashHistory } from "history";
+import { createBrowserHistory } from "history";
 
-export const history = createHashHistory();
+export const history = createBrowserHistory();
 
 export const store = createStore(
   rootReducer(history),
