@@ -10,4 +10,5 @@ export enum urls {
   regUsers = "/regiserUser",
   booklet = "/booklet",
   loginAdmin = "",
+  seminar = "/iwideseminar",
 }

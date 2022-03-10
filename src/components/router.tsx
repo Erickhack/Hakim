@@ -1,5 +1,5 @@
 import { Fragment, lazy, Suspense } from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router";
 import { LayoutDefault } from "./layout/LayoutDefault";
 import { urls } from "./interfaces";
 
@@ -9,7 +9,7 @@ const routesConfig = [
     layout: LayoutDefault,
     routes: [
       {
-        path: "/admin",
+        path: "/",
         exact: true,
         component: () => <Redirect to={urls.main} />,
       },
@@ -18,7 +18,7 @@ const routesConfig = [
         path: urls.main,
         component: lazy(() =>
           import("./feature/Main/AboutUnior/AboutUnior").then((module) => ({
-            default: module.default,
+            default: module.AboutUnior,
           }))
         ),
       },
@@ -27,7 +27,16 @@ const routesConfig = [
         exact: true,
         component: lazy(() =>
           import("./feature/Main/RegisterUser/RegisterUser").then((module) => ({
-            default: module.default,
+            default: module.RegisterUser,
+          }))
+        ),
+      },
+      {
+        path: urls.seminar,
+        exact: true,
+        component: lazy(() =>
+          import("./feature/Main/Seminars/Seminars").then((module) => ({
+            default: module.Seminars,
           }))
         ),
       },

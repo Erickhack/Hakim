@@ -21,3 +21,11 @@ body {
   position: absolute;
   background: linear-gradient(to right, rgba(8, 43, 65, 0) 0%, #082b41 60%);
 }
+
+main {
+  > section {
+    padding: 80px;
+    background: white;
+    text-align: justify;
+  }
+}
