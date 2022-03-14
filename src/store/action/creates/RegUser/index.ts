@@ -1,3 +1,4 @@
+import { RegUserApi } from "./../../../../hook/api/index";
 import { Axios } from "./../../../../hook/axios/axios";
 import { RegUserAction } from "./../../index";
 import { RegUserAT } from "./../../types";
@@ -32,17 +33,22 @@ export const handleChange = (
   };
 };
 
-export const hanldeSubmit = () => async (dispatch: Dispatch, getState: any) => {
-  try {
-    const fd = new FormData();
-    const postData = getState().RegisterUser?.otherDate!.editPost;
+export const hanldeSubmit =
+  () => async (dispatch: Dispatch<any>, getState: any) => {
+    try {
+      const fd = new FormData();
+      const postData = getState().RegisterUser?.otherDate!.editPost;
 
-    for (const key in postData) {
-      fd.append(key, postData[key]);
+      for (const key in postData) {
+        fd.append(key, postData[key]);
+      }
+
+      const res = await Axios.post(RegUserApi.PostRegUser, fd);
+
+      if (res.status >= 200 && res.status <= 299) {
+        dispatch(regSuccess(res.data));
+      }
+    } catch (e) {
+      console.log(e);
     }
-
-    await Axios.post(`${process.env.REACT_APP_API_REGISTER_USER_URL}`, fd);
-  } catch (e) {
-    console.log(e);
-  }
-};
+  };

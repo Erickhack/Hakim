@@ -1,3 +1,4 @@
+import { GetUserApi } from "./../../../../hook/api/index";
 import { Axios } from "./../../../../hook/axios/axios";
 import { RootState } from "./../../../index";
 import { IgetUserData } from "./../../index";
@@ -17,13 +18,14 @@ const success = (data: GetUserData[]) => {
 };
 
 export const getUserData =
-  () => async (dispatch: Dispatch, getState: () => RootState) => {
+  () => async (dispatch: Dispatch<any>, getState: () => RootState) => {
     try {
-      const res = await Axios.get(
-        `${process.env.REACT_APP_API_GETLIST_USER_URL}`
-      );
+      const res = await Axios({
+        url: GetUserApi.GetDateUser,
+      });
+
       const data = await res.data;
-      success(data);
+      dispatch(success(data));
     } catch (e) {
       console.error(e);
     }

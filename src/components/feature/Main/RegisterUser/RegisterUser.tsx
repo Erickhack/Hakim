@@ -16,10 +16,6 @@ export function RegisterUser() {
       ...state.RegisterUser.otherDate?.editPost,
     }));
 
-  // const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-  //   event.preventDefault();
-  // };
-
   const configElements: configRegElem[] = [
     {
       name: "fullName",
@@ -87,7 +83,7 @@ export function RegisterUser() {
   ];
 
   return (
-    <section className="register-user">
+    <section className="register-user in-main">
       <form
         id="reg-user-gis"
         onSubmit={(evt) => {
@@ -103,7 +99,7 @@ export function RegisterUser() {
               </label>
               <div className="col-sm-9">
                 <input
-                  // required
+                  required
                   name={o.name}
                   type={o.type}
                   className="form-control"

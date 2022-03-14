@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { bindActionCreators } from "redux";
 import { GetUserDataActionCreator, RootState } from "../../../../store";
@@ -9,12 +10,18 @@ export function Seminars() {
     dispatch
   );
 
+  useEffect(() => {
+    getUserData();
+  }, []);
+
   const { item } = useSelector((state: RootState) => ({
     ...state.GetUserData,
   }));
 
+  console.log(item);
+
   return (
-    <section className="seminar">
+    <section className="seminar in-main">
       <div className="table-responsive">
         <table className="table table-bordered align-middle">
           <thead>

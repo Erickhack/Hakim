@@ -9,6 +9,7 @@ export enum urls {
   main = "/main",
   regUsers = "/regiserUser",
   booklet = "/booklet",
-  loginAdmin = "",
+  loginAdmin = "/longinAdmin",
   seminar = "/iwideseminar",
+  admin = "/admin",
 }

@@ -59,5 +59,10 @@ const reguserChange: TyepReduce<IreguserChange> = (state, action) => {
 };
 
 const reguserSuccess: TyepReduce<IreguserSuccess> = (state, action) => {
-  return { ...state };
+  return {
+    ...state,
+    otherDate: {
+      editPost: null,
+    },
+  };
 };

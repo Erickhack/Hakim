@@ -1,9 +1,28 @@
 import { Fragment, lazy, Suspense } from "react";
 import { Redirect, Route, Switch } from "react-router";
 import { LayoutDefault } from "./layout/LayoutDefault";
+import { LayoutAdmin } from "./layout/LayoutAdmin";
 import { urls } from "./interfaces";
+import { Auth } from "../components/feature/Admin/Auth/Auth";
+import "./GlobalStyle.scss";
 
 const routesConfig = [
+  {
+    path: urls.admin,
+    layout: LayoutAdmin,
+    guard: Auth,
+    routes: [
+      {
+        path: urls.admin,
+        exact: true,
+        component: lazy(() =>
+          import("../components/feature/Admin/Auth/Auth").then((module) => ({
+            default: module.Auth,
+          }))
+        ),
+      },
+    ],
+  },
   {
     path: "/",
     layout: LayoutDefault,
@@ -58,9 +77,9 @@ const renderRoutes = (routes: any) =>
               key={i}
               path={route.path}
               exact={route.exact}
-              render={(props: any) => (
-                <Guard>
-                  <Switch>
+              render={(props: any) => {
+                return (
+                  <Guard>
                     <Layout>
                       {route.routes ? (
                         renderRoutes(route.routes)
@@ -68,9 +87,9 @@ const renderRoutes = (routes: any) =>
                         <Component {...props} />
                       )}
                     </Layout>
-                  </Switch>
-                </Guard>
-              )}
+                  </Guard>
+                );
+              }}
             />
           );
         })}

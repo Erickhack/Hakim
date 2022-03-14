@@ -13,10 +13,14 @@
     "axios": "^0.26.0",
     "connected-react-router": "^6.9.2",
     "csstype": "^3.0.11",
-    "history": "^5.3.0",
+    "date-fns": "^2.28.0",
+    "history": "^4.10.1",
+    "jsrsasign": "^10.5.12",
+    "jsrsasign-util": "^1.0.5",
     "node-sass": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
     "react-router": "^5.2.1",
     "react-router-dom": "^5.2.1",
     "react-scripts": "5.0.0",
@@ -52,6 +56,7 @@
     ]
   },
   "devDependencies": {
+    "@types/jsrsasign": "^9.0.3",
     "@types/react-router": "^5.1.18",
     "@types/react-router-dom": "^5.3.3"
   }
