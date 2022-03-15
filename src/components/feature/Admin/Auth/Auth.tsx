@@ -20,5 +20,5 @@ export const Auth: FC<{ child: ReactNode }> = ({ children }) => {
 
   removeToken();
 
-  return <Redirect to={urls.loginAdmin} />;
+  return <Redirect to={`${urls.admin}${urls.loginAdmin}`} />;
 };

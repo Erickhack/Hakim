@@ -14,5 +14,10 @@ main {
     padding: 80px;
     background: white;
     text-align: justify;
+
+    iframe {
+      width: 100%;
+      height: 100ch;
+    }
   }
 }

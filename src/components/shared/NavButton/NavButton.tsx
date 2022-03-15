@@ -15,12 +15,15 @@ export const NavButton = () => {
         },
         {
           elem: "УЧЕНЫЙ СОВЕТ",
+          link: urls.THESTUDENTSCOUNCIL,
         },
         {
           elem: "БУКЛЕТ",
+          link: urls.booklet,
         },
         {
           elem: "ОБРАТНАЯ СВЯЗЬ",
+          link: urls.REFERENCE,
         },
       ],
     },
@@ -29,9 +32,11 @@ export const NavButton = () => {
       subElem: [
         {
           elem: "ДЕЙСТВУЮЩИЕ СОВЕТЫ",
+          link: urls.CURRENTTIPS,
         },
         {
           elem: "АРХИВ",
+          link: urls.ARCHIVE,
         },
       ],
     },
@@ -40,18 +45,23 @@ export const NavButton = () => {
       subElem: [
         {
           elem: "ОТДЕЛ ТЕОРИИ ЧИСЕЛ,АЛГЕБРЫ И ТОПОЛОГИИ",
+          link: urls.DEPARTMENTOFNUMBERTHEORYALGEBRAANDTOPOLOGY,
         },
         {
           elem: "ОТДЕЛ ДИФФЕРЕНЦИАЛЬНЫХ УРАВНЕНИЙ",
+          link: urls.DIFFERENTIALEQUATIONSDEPARTMENT,
         },
         {
           elem: "ОТДЕЛ ТЕОРИЯ ФУНКЦИЙ И ФУНКЦИОНАЛЬНОГО АНАЛИЗА",
+          link: urls.DEPARTMENTOFFUNCTIONTHEORYANDFUNCTIONALANALYSIS,
         },
         {
           elem: "ОТДЕЛ ПРИКЛАДНОЙ МАТЕМАТИКИ И МЕХАНИКИ",
+          link: urls.DEPARTMENTOFAPPLIEDMATHEMATICSANDMECHANICS,
         },
         {
           elem: "ОТДЕЛ МАТЕМАТИЧЕСКОГО МОДЕЛИРОВАНИЯ",
+          link: urls.DEPARTMENTOFMATHEMATICALMODELING,
         },
       ],
     },
@@ -72,6 +82,7 @@ export const NavButton = () => {
         },
         {
           elem: "СЕМИНАРЫ ИМ АН РТ",
+          link: urls.SEMINARSOFTHERUSSIANACADEMYOFSCIENCES,
         },
       ],
     },
@@ -80,9 +91,11 @@ export const NavButton = () => {
       subElem: [
         {
           elem: "НОВОСТИ",
+          link: urls.NEWS,
         },
         {
           elem: "МАТЕРИАЛЫ КОНФЕРЕНЦИЙ",
+          link: urls.CONFERENCEPROCEEDINGS,
         },
       ],
     },
@@ -91,9 +104,11 @@ export const NavButton = () => {
       subElem: [
         {
           elem: "ДОКЛАДЫ АН РТ",
+          link: urls.REPORTSOFTHEACADEMYOFSCIENCESOFTHEREPUBLICOFTATARSTAN,
         },
         {
           elem: "ИЗВЕСТИЯ АН РТ",
+          link: urls.IZVESTIAOFTHEACADEMYOFSCIENCESOFTHEREPUBLICOFTATARSTAN,
         },
       ],
     },

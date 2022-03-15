@@ -7,3 +7,9 @@ export enum RegUserAT {
 export enum GetUserAT {
   GETUSER_SUCCESS = "GETUSER_SUCCESS",
 }
+
+export enum GetAllDocxAT {
+  GETDOCX_SUCCESS = "GETDOCX_SUCCESS",
+  GETDOCX_FAILED = "GETDOCX_FAILED",
+  GETDOCX_LOADING = "GETDOCX_LOADING",
+}

@@ -6,6 +6,7 @@ import thunk from "redux-thunk";
 import { createBrowserHistory } from "history";
 export * as RegisterUserActionCreator from "./action/creates/RegUser";
 export * as GetUserDataActionCreator from "./action/creates/GetDataUser";
+export * as DocxActionCreator from "./action/creates/GetAllDocx";
 
 export const history = createBrowserHistory();
 

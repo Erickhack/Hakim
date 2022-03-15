@@ -1,6 +1,7 @@
+import { docxItemConfig } from "../reducers/Docx/interface";
 import { GetUserData } from "./../reducers/GetUserData/interface";
 import { fomrRegUser } from "./../reducers/RegUser/interface";
-import { GetUserAT, RegUserAT } from "./types";
+import { GetAllDocxAT, GetUserAT, RegUserAT } from "./types";
 
 export interface IreguserSuccess {
   type: RegUserAT.HANLDE_SUCCESS;
@@ -37,3 +38,14 @@ export interface IgetUserData {
 }
 
 export type GetUserAction = IgetUserData;
+
+// get all docx
+
+export interface IGetAllDocx {
+  type: GetAllDocxAT.GETDOCX_SUCCESS;
+  payload: {
+    data: docxItemConfig[];
+  };
+}
+
+export type DocxAction = IGetAllDocx;

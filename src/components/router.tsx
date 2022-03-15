@@ -13,19 +13,10 @@ const routesConfig = [
     guard: Auth,
     routes: [
       {
-        path: urls.admin,
-        exact: true,
-        component: lazy(() =>
-          import("../components/feature/Admin/Auth/Auth").then((module) => ({
-            default: module.Auth,
-          }))
-        ),
-      },
-      {
         path: urls.loginAdmin,
         exact: true,
         component: lazy(() =>
-          import("./feature/Admin/LogIn/LogIn").then((module) => ({
+          import("../components/feature/Admin/LogIn/LogIn").then((module) => ({
             default: module.LogIn,
           }))
         ),
@@ -65,6 +56,177 @@ const routesConfig = [
         component: lazy(() =>
           import("./feature/Main/Seminars/Seminars").then((module) => ({
             default: module.Seminars,
+          }))
+        ),
+      },
+      {
+        exact: true,
+        path: urls.booklet,
+        component: lazy(() =>
+          import("./feature/Main/BOOKLET").then((module) => ({
+            default: module.Booklet,
+          }))
+        ),
+      },
+      {
+        exact: true,
+        path: urls.ARCHIVE,
+        component: lazy(() =>
+          import("./feature/Main/ARCHIVE").then((module) => ({
+            default: module.ARCHIVE,
+          }))
+        ),
+      },
+      {
+        exact: true,
+        path: urls.COLLEGESEMINAR,
+        component: lazy(() =>
+          import("./feature/Main/COLLEGESEMINAR").then((module) => ({
+            default: module.COLLEGESEMINAR,
+          }))
+        ),
+      },
+      {
+        exact: true,
+        path: urls.THESTUDENTSCOUNCIL,
+        component: lazy(() =>
+          import("./feature/Main/THESTUDENTSCOUNCIL").then((module) => ({
+            default: module.THESTUDENTSCOUNCIL,
+          }))
+        ),
+      },
+      {
+        exact: true,
+        path: urls.REFERENCE,
+        component: lazy(() =>
+          import("./feature/Main/REFERENCE").then((module) => ({
+            default: module.REFERENCE,
+          }))
+        ),
+      },
+      {
+        exact: true,
+        path: urls.CURRENTTIPS,
+        component: lazy(() =>
+          import("./feature/Main/CURRENTTIPS").then((module) => ({
+            default: module.CURRENTTIPS,
+          }))
+        ),
+      },
+      {
+        exact: true,
+        path: urls.DEPARTMENTOFNUMBERTHEORYALGEBRAANDTOPOLOGY,
+        component: lazy(() =>
+          import(
+            "./feature/Main/DEPARTMENTOFNUMBERTHEORYALGEBRAANDTOPOLOGY"
+          ).then((module) => ({
+            default: module.DEPARTMENTOFNUMBERTHEORYALGEBRAANDTOPOLOGY,
+          }))
+        ),
+      },
+      {
+        exact: true,
+        path: urls.DIFFERENTIALEQUATIONSDEPARTMENT,
+        component: lazy(() =>
+          import("./feature/Main/DIFFERENTIALEQUATIONSDEPARTMENT").then(
+            (module) => ({
+              default: module.DIFFERENTIALEQUATIONSDEPARTMENT,
+            })
+          )
+        ),
+      },
+      {
+        exact: true,
+        path: urls.DEPARTMENTOFFUNCTIONTHEORYANDFUNCTIONALANALYSIS,
+        component: lazy(() =>
+          import(
+            "./feature/Main/DEPARTMENTOFFUNCTIONTHEORYANDFUNCTIONALANALYSIS"
+          ).then((module) => ({
+            default: module.DEPARTMENTOFFUNCTIONTHEORYANDFUNCTIONALANALYSIS,
+          }))
+        ),
+      },
+      {
+        exact: true,
+        path: urls.DEPARTMENTOFAPPLIEDMATHEMATICSANDMECHANICS,
+        component: lazy(() =>
+          import(
+            "./feature/Main/DEPARTMENTOFAPPLIEDMATHEMATICSANDMECHANICS"
+          ).then((module) => ({
+            default: module.DEPARTMENTOFAPPLIEDMATHEMATICSANDMECHANICS,
+          }))
+        ),
+      },
+      {
+        exact: true,
+        path: urls.DEPARTMENTOFMATHEMATICALMODELING,
+        component: lazy(() =>
+          import("./feature/Main/DEPARTMENTOFMATHEMATICALMODELING").then(
+            (module) => ({
+              default: module.DEPARTMENTOFMATHEMATICALMODELING,
+            })
+          )
+        ),
+      },
+      {
+        exact: true,
+        path: urls.CONSTRUCTORS,
+        component: lazy(() =>
+          import("./feature/Main/CONSTRUCTORS").then((module) => ({
+            default: module.CONSTRUCTORS,
+          }))
+        ),
+      },
+      {
+        exact: true,
+        path: urls.SEMINARSOFTHERUSSIANACADEMYOFSCIENCES,
+        component: lazy(() =>
+          import("./feature/Main/SEMINARSOFTHERUSSIANACADEMYOFSCIENCES").then(
+            (module) => ({
+              default: module.SEMINARSOFTHERUSSIANACADEMYOFSCIENCES,
+            })
+          )
+        ),
+      },
+      {
+        exact: true,
+        path: urls.NEWS,
+        component: lazy(() =>
+          import("./feature/Main/NEWS").then((module) => ({
+            default: module.NEWS,
+          }))
+        ),
+      },
+      {
+        exact: true,
+        path: urls.CONFERENCEPROCEEDINGS,
+        component: lazy(() =>
+          import("./feature/Main/CONFERENCEPROCEEDINGS").then((module) => ({
+            default: module.CONFERENCEPROCEEDINGS,
+          }))
+        ),
+      },
+      {
+        exact: true,
+        path: urls.REPORTSOFTHEACADEMYOFSCIENCESOFTHEREPUBLICOFTATARSTAN,
+        component: lazy(() =>
+          import(
+            "./feature/Main/REPORTSOFTHEACADEMYOFSCIENCESOFTHEREPUBLICOFTATARSTAN"
+          ).then((module) => ({
+            default:
+              module.REPORTSOFTHEACADEMYOFSCIENCESOFTHEREPUBLICOFTATARSTAN,
+          }))
+        ),
+      },
+      {
+        exact: true,
+        path: urls.IZVESTIAOFTHEACADEMYOFSCIENCESOFTHEREPUBLICOFTATARSTAN,
+        component: lazy(() =>
+          import(
+            "./feature/Main/IZVESTIAOFTHEACADEMYOFSCIENCESOFTHEREPUBLICOFTATARSTAN"
+          ).then((module) => ({
+            default:
+              module.IZVESTIAOFTHEACADEMYOFSCIENCESOFTHEREPUBLICOFTATARSTAN,
           }))
         ),
       },

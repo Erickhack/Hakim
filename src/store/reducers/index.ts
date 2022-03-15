@@ -1,3 +1,4 @@
+import { reducerDocx } from "./Docx/index";
 import { reduceGetUserData } from "./GetUserData/index";
 import { connectRouter } from "connected-react-router";
 import { History } from "history";
@@ -9,5 +10,6 @@ export const rootReducer = (history: History) => {
     router: connectRouter(history),
     RegisterUser: reduceRegUser,
     GetUserData: reduceGetUserData,
+    Docx: reducerDocx,
   });
 };
