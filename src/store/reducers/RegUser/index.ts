@@ -11,7 +11,7 @@ const Post: fomrRegUser = {
   position: "",
   ranks: "",
   report: "",
-  rezume: null,
+  file: null,
 };
 
 const initialState: configState<fomrRegUser> = {

@@ -11,7 +11,7 @@ export function RegisterUser() {
     dispatch
   );
 
-  const { email, fullName, job, numberPhone, position, ranks, report, rezume } =
+  const { email, fullName, job, numberPhone, position, ranks, report } =
     useSelector((state: RootState) => ({
       ...state.RegisterUser.otherDate?.editPost,
     }));
@@ -78,7 +78,7 @@ export function RegisterUser() {
       placeholder: "Файли document world",
       text: "Резюме",
       type: "file",
-      name: "rezume",
+      name: "file",
     },
   ];
 

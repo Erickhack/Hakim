@@ -17,5 +17,5 @@ export interface fomrRegUser {
   position: string;
   ranks: string;
   report: string;
-  rezume: File | null;
+  file: File | null;
 }
