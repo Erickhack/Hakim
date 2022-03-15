@@ -9,7 +9,7 @@ export function DEPARTMENTOFAPPLIEDMATHEMATICSANDMECHANICS() {
   return (
     <section className="about-unior in-main">
       {items
-        .filter((o, i) => o.position === pwdDocx.DEPARTMENTOFAPPLIEDMATHEMATICSANDMECHANICS)
+        .filter((o, i) => o.positions === pwdDocx.DEPARTMENTOFAPPLIEDMATHEMATICSANDMECHANICS)
         .map((k, j) => (
           <iframe key={j} src={k.fileName} frameBorder={0}></iframe>
         ))}

@@ -9,7 +9,7 @@ export function CONFERENCEPROCEEDINGS() {
   return (
     <section className="about-unior in-main">
       {items
-        .filter((o, i) => o.position === pwdDocx.CONFERENCEPROCEEDINGS)
+        .filter((o, i) => o.positions === pwdDocx.CONFERENCEPROCEEDINGS)
         .map((k, j) => (
           <iframe key={j} src={k.fileName} frameBorder={0}></iframe>
         ))}

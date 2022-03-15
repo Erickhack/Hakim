@@ -9,7 +9,7 @@ export function REFERENCE() {
   return (
     <section className="about-unior in-main">
       {items
-        .filter((o, i) => o.position === pwdDocx.REFERENCE)
+        .filter((o, i) => o.positions === pwdDocx.REFERENCE)
         .map((k, j) => (
           <iframe key={j} src={k.fileName} frameBorder={0}></iframe>
         ))}

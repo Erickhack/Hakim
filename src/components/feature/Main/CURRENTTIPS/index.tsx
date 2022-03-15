@@ -9,7 +9,7 @@ export function CURRENTTIPS() {
   return (
     <section className="about-unior in-main">
       {items
-        .filter((o, i) => o.position === pwdDocx.CURRENTTIPS)
+        .filter((o, i) => o.positions === pwdDocx.CURRENTTIPS)
         .map((k, j) => (
           <iframe key={j} src={k.fileName} frameBorder={0}></iframe>
         ))}

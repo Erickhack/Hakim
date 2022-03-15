@@ -9,7 +9,7 @@ export function NEWS() {
   return (
     <section className="about-unior in-main">
       {items
-        .filter((o, i) => o.position === pwdDocx.NEWS)
+        .filter((o, i) => o.positions === pwdDocx.NEWS)
         .map((k, j) => (
           <iframe key={j} src={k.fileName} frameBorder={0}></iframe>
         ))}

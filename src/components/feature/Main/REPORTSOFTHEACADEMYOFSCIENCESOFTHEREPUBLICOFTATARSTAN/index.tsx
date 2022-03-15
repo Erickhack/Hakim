@@ -9,7 +9,7 @@ export function REPORTSOFTHEACADEMYOFSCIENCESOFTHEREPUBLICOFTATARSTAN() {
   return (
     <section className="about-unior in-main">
       {items
-        .filter((o, i) => o.position === pwdDocx.REPORTSOFTHEACADEMYOFSCIENCESOFTHEREPUBLICOFTATARSTAN)
+        .filter((o, i) => o.positions === pwdDocx.REPORTSOFTHEACADEMYOFSCIENCESOFTHEREPUBLICOFTATARSTAN)
         .map((k, j) => (
           <iframe key={j} src={k.fileName} frameBorder={0}></iframe>
         ))}

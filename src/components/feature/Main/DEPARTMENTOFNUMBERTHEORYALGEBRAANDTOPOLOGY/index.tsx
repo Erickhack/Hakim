@@ -11,7 +11,7 @@ export function DEPARTMENTOFNUMBERTHEORYALGEBRAANDTOPOLOGY() {
       {items
         .filter(
           (o, i) =>
-            o.position === pwdDocx.DEPARTMENTOFNUMBERTHEORYALGEBRAANDTOPOLOGY
+            o.positions === pwdDocx.DEPARTMENTOFNUMBERTHEORYALGEBRAANDTOPOLOGY
         )
         .map((k, j) => (
           <iframe key={j} src={k.fileName} frameBorder={0}></iframe>

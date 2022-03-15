@@ -9,7 +9,7 @@ export function DEPARTMENTOFFUNCTIONTHEORYANDFUNCTIONALANALYSIS() {
   return (
     <section className="about-unior in-main">
       {items
-        .filter((o, i) => o.position === pwdDocx.DEPARTMENTOFFUNCTIONTHEORYANDFUNCTIONALANALYSIS)
+        .filter((o, i) => o.positions === pwdDocx.DEPARTMENTOFFUNCTIONTHEORYANDFUNCTIONALANALYSIS)
         .map((k, j) => (
           <iframe key={j} src={k.fileName} frameBorder={0}></iframe>
         ))}

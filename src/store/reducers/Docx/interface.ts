@@ -7,5 +7,5 @@ export interface docxInitConfig<T> {
 
 export interface docxItemConfig {
   fileName: string;
-  position: string;
+  positions: string;
 }

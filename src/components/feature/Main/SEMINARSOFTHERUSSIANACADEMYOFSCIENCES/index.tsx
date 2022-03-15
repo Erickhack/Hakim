@@ -9,7 +9,7 @@ export function SEMINARSOFTHERUSSIANACADEMYOFSCIENCES() {
   return (
     <section className="about-unior in-main">
       {items
-        .filter((o, i) => o.position === pwdDocx.SEMINARSOFTHERUSSIANACADEMYOFSCIENCES)
+        .filter((o, i) => o.positions === pwdDocx.SEMINARSOFTHERUSSIANACADEMYOFSCIENCES)
         .map((k, j) => (
           <iframe key={j} src={k.fileName} frameBorder={0}></iframe>
         ))}

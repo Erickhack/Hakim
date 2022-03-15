@@ -9,7 +9,7 @@ export function Booklet() {
   return (
     <section className="about-unior in-main">
       {items
-        .filter((o, i) => o.position === pwdDocx.BOOKLET)
+        .filter((o, i) => o.positions === pwdDocx.BOOKLET)
         .map((k, j) => (
           <iframe key={j} src={k.fileName} frameBorder={0}></iframe>
         ))}

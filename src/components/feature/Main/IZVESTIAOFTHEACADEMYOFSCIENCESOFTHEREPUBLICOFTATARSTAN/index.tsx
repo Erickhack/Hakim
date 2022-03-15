@@ -11,7 +11,7 @@ export function IZVESTIAOFTHEACADEMYOFSCIENCESOFTHEREPUBLICOFTATARSTAN() {
       {items
         .filter(
           (o, i) =>
-            o.position ===
+            o.positions ===
             pwdDocx.IZVESTIAOFTHEACADEMYOFSCIENCESOFTHEREPUBLICOFTATARSTAN
         )
         .map((k, j) => (
