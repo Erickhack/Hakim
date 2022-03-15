@@ -1,3 +1,3 @@
-export default function LogIn() {
+export function LogIn() {
   return <section>LogIn</section>;
 }

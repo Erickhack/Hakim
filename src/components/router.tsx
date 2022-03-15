@@ -21,6 +21,15 @@ const routesConfig = [
           }))
         ),
       },
+      {
+        path: urls.loginAdmin,
+        exact: true,
+        component: lazy(() =>
+          import("./feature/Admin/LogIn/LogIn").then((module) => ({
+            default: module.LogIn,
+          }))
+        ),
+      },
     ],
   },
   {
